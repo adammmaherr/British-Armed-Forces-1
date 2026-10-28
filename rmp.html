@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#171714">
+  <meta name="description" content="Discover the Royal Military Police, a regiment in the British Armed Forces Roblox community.">
+  <title>RMP | British Armed Forces</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#171714;--panel:#22221e;--panel2:#2b2a24;--beige:#c94b4b;--cream:#eee7e7;--muted:#aaa0a0;--border:rgba(201,75,75,.24);--heading:'Cinzel',Georgia,serif;--body:'Inter',Arial,sans-serif}
+    *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:100px}body{min-height:100vh;background:var(--bg);color:var(--cream);font-family:var(--body);overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit}
+    .background{position:fixed;inset:0;z-index:-2;background:linear-gradient(180deg,rgba(16,16,14,.73),rgba(16,16,14,.9) 52%,#171714 100%),url('baf.png') center/cover no-repeat;transform:scale(1.02)}.background:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,9,.34),transparent 50%,rgba(10,10,9,.34))}
+    .header{position:sticky;top:0;z-index:100;background:rgba(23,23,20,.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}.nav{width:min(1200px,92%);min-height:82px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:25px}.brand{display:flex;align-items:center;gap:13px;min-width:0}.brand img{width:49px;height:49px;object-fit:contain;flex-shrink:0}.brand-text{display:flex;flex-direction:column;gap:4px}.brand-title{font:800 17px var(--heading);letter-spacing:1.2px;white-space:nowrap}.brand-subtitle{color:var(--muted);font-size:9px;letter-spacing:2.2px;text-transform:uppercase}.nav-links{display:flex;align-items:center;gap:28px}.nav-links a{position:relative;padding:10px 0;color:#c7c2b5;font-size:12px;font-weight:600;transition:color .25s}.nav-links a:hover{color:var(--cream)}.nav-links a:after{content:'';position:absolute;left:0;bottom:3px;width:0;height:2px;background:var(--beige);transition:width .25s}.nav-links a:hover:after{width:100%}.menu-toggle{display:none;width:43px;height:43px;color:var(--cream);background:var(--panel);border:1px solid var(--border);border-radius:8px;cursor:pointer}
+    .wrap{width:min(1120px,92%);margin:auto}.hero{min-height:590px;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:50px;padding:80px 0 95px}.hero-content{animation:reveal .8s ease both}.eyebrow,.kicker{display:block;margin-bottom:17px;color:var(--beige);font-size:10px;font-weight:800;letter-spacing:3px;text-transform:uppercase}.eyebrow:before{content:'';display:inline-block;width:30px;height:1px;margin:0 10px 3px 0;background:var(--beige)}h1,h2,h3{font-family:var(--heading)}h1{margin-bottom:18px;font-size:clamp(48px,7vw,82px);line-height:1.08;letter-spacing:-1.5px}h1 span{display:block;color:var(--beige)}.motto{margin-bottom:24px;color:var(--beige);font:italic 18px var(--heading);letter-spacing:1px}.description{max-width:620px;color:#c1bdaf;font-size:13px;line-height:2}.actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}.button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:49px;padding:0 22px;border:1px solid transparent;border-radius:4px;font-size:10px;font-weight:800;letter-spacing:1px;transition:all .25s}.button:hover{transform:translateY(-3px)}.primary{background:var(--beige);color:#191916}.primary:hover{background:var(--cream)}.secondary{background:rgba(23,23,20,.45);color:var(--cream);border-color:var(--border)}.secondary:hover{border-color:var(--beige);background:rgba(201,75,75,.08)}.crest-panel{position:relative;min-height:360px;display:grid;place-items:center;padding:35px;background:linear-gradient(145deg,rgba(201,75,75,.09),rgba(25,25,21,.72));border:1px solid var(--border);animation:reveal .9s .12s ease both}.crest-panel:before,.crest-panel:after{content:'';position:absolute;width:32px;height:32px;border-color:var(--beige);opacity:.65}.crest-panel:before{top:15px;left:15px;border-top:1px solid;border-left:1px solid}.crest-panel:after{right:15px;bottom:15px;border-right:1px solid;border-bottom:1px solid}.crest-panel img{width:min(230px,80%);max-height:245px;object-fit:contain;filter:drop-shadow(0 12px 25px rgba(0,0,0,.35))}.crest-label{position:absolute;bottom:20px;color:var(--muted);font-size:9px;letter-spacing:3px;text-transform:uppercase}
+    .divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent)}.section{padding:82px 0}.section-heading{max-width:700px;margin-bottom:35px}.section-heading .kicker{margin-bottom:12px}.section-heading h2{margin-bottom:16px;font-size:clamp(27px,4vw,42px);line-height:1.25}.section-heading p,.copy p{color:#b9b4a6;font-size:13px;line-height:2}.mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.mission-card{padding:29px;background:linear-gradient(145deg,rgba(43,42,36,.94),rgba(27,27,23,.97));border:1px solid var(--border);border-radius:4px}.card-number{display:block;margin-bottom:22px;color:#9c947f;font-size:10px;font-weight:800;letter-spacing:2px}.mission-card h3{margin-bottom:13px;font-size:20px}.mission-card p{color:#b9b4a6;font-size:12px;line-height:2}.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.principle{padding:24px 22px;background:rgba(201,75,75,.045);border:1px solid rgba(201,75,75,.13)}.principle-icon{display:grid;place-items:center;width:39px;height:39px;margin-bottom:18px;background:rgba(201,75,75,.1);color:var(--beige);font-size:18px}.principle h3{margin-bottom:9px;font:700 13px var(--body)}.principle p{color:var(--muted);font-size:11px;line-height:1.9}.quote{padding:38px 42px;background:linear-gradient(110deg,rgba(201,75,75,.12),rgba(201,75,75,.035));border:1px solid var(--border);text-align:center}.quote .kicker{margin-bottom:15px}.quote blockquote{font:600 clamp(20px,3vw,30px)/1.5 var(--heading)}.quote p{margin-top:13px;color:var(--muted);font-size:11px;line-height:1.8}.cta{margin:0 auto 90px;padding:38px;display:flex;align-items:center;justify-content:space-between;gap:25px;background:rgba(23,23,20,.72);border:1px solid var(--border)}.cta h2{margin-bottom:10px;font-size:clamp(24px,3vw,34px)}.cta p{color:var(--muted);font-size:12px;line-height:1.9}.cta .button{flex-shrink:0}.footer{border-top:1px solid var(--border);background:rgba(15,15,13,.84)}.footer-inner{width:min(1200px,92%);min-height:105px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}.footer-brand{display:flex;align-items:center;gap:11px;font:800 12px var(--heading);letter-spacing:1px}.footer-brand img{width:33px;height:33px;object-fit:contain}.footer-copy{color:#8f8b7e;font-size:10px;line-height:1.8;text-align:right}
+    @keyframes reveal{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}@media(max-width:850px){.hero{grid-template-columns:1fr .7fr;gap:25px}.crest-panel{min-height:300px}.mission-grid{grid-template-columns:1fr 1fr}}@media(max-width:650px){.nav{min-height:72px}.brand img{width:42px;height:42px}.brand-title{font-size:12px;letter-spacing:.5px}.brand-subtitle{font-size:7px;letter-spacing:1.2px}.menu-toggle{display:inline-flex;align-items:center;justify-content:center;font-size:22px}.nav-links{position:absolute;top:calc(100% + 1px);left:0;right:0;display:none;flex-direction:column;align-items:stretch;gap:0;padding:10px 4%;background:rgba(23,23,20,.98);border-bottom:1px solid var(--border)}.nav-links.open{display:flex}.nav-links a{padding:15px 4px;border-bottom:1px solid rgba(201,75,75,.08)}.nav-links a:after{display:none}.hero{grid-template-columns:1fr;gap:32px;padding:70px 0 75px}.hero h1{font-size:clamp(43px,12vw,65px)}.crest-panel{min-height:300px}.crest-panel img{width:190px}.actions{flex-direction:column;max-width:300px}.button{width:100%}.section{padding:65px 0}.mission-grid,.principles{grid-template-columns:1fr}.mission-card{padding:24px}.quote{padding:30px 22px}.cta{align-items:stretch;flex-direction:column;margin-bottom:65px;padding:27px}.footer-inner{align-items:flex-start;flex-direction:column;justify-content:center;padding:25px 0}.footer-copy{text-align:left}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <div class="background" aria-hidden="true"></div>
+  <header class="header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="British Armed Forces home"><img src="logo.png" alt="BAF logo"><span class="brand-text"><span class="brand-title">BRITISH ARMED FORCES</span><span class="brand-subtitle">Discipline · Honour · Service</span></span></a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+      <div class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="index.html#regiments">Regiments</a><a href="index.html#community">Community</a><a href="index.html#values">Our Values</a></div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero wrap" id="top">
+      <div class="hero-content">
+        <div class="eyebrow">REGIMENT 02 · MILITARY POLICE</div>
+        <h1>ROYAL MILITARY <span>POLICE</span></h1>
+        <p class="motto">“Exemplo Ducemus”</p>
+        <p class="description">RMP represents the military police unit within our British Armed Forces Roblox community. In our community setting, the regiment represents discipline, law enforcement, and supporting the safety and order of military personnel and facilities.</p>
+        <div class="actions"><a class="button primary" href="#mission">DISCOVER RMP <span aria-hidden="true">↓</span></a><a class="button secondary" href="index.html#regiments">← BACK TO REGIMENTS</a></div>
+      </div>
+      <div class="crest-panel"><img src="RMP.PNG" alt="RMP regiment emblem"><span class="crest-label">RMP · REGIMENT EMBLEM</span></div>
+    </section>
+    <div class="divider"></div>
+    <section class="section wrap" id="mission">
+      <div class="section-heading"><div class="kicker">OUR ROLE</div><h2>Discipline. Order. Service.</h2><p>RMP is presented in this community as a specialist regiment focused on demanding situations where teamwork, composure, and careful coordination matter.</p></div>
+      <div class="mission-grid">
+        <article class="mission-card"><span class="card-number">01 / TACTICAL RESPONSE</span><h3>Military Policing</h3><p>In the roleplay environment, RMP members help maintain discipline and order, respond to incidents, and communicate clearly while working as a coordinated team.</p></article>
+        <article class="mission-card"><span class="card-number">02 / SECURITY & PROTECTION</span><h3>Order & Protection</h3><p>RMP's community role also represents support for the security and protection of the United Kingdom, with an emphasis on responsibility, professionalism, and safeguarding others.</p></article>
+      </div>
+    </section>
+    <div class="divider"></div>
+    <section class="section wrap">
+      <div class="section-heading"><div class="kicker">THE RMP STANDARD</div><h2>What Defines the Regiment?</h2><p>These are the core values this page highlights for RMP members in the BAF community.</p></div>
+      <div class="principles">
+        <article class="principle"><span class="principle-icon" aria-hidden="true">✦</span><h3>Discipline</h3><p>Remain composed, follow community rules, and act responsibly in every scenario.</p></article>
+        <article class="principle"><span class="principle-icon" aria-hidden="true">⌖</span><h3>Teamwork</h3><p>Communicate respectfully, coordinate with teammates, and support the wider unit.</p></article>
+        <article class="principle"><span class="principle-icon" aria-hidden="true">⚑</span><h3>Commitment</h3><p>Bring consistency, preparation, and a strong sense of duty to community activities.</p></article>
+      </div>
+    </section>
+    <section class="section wrap" style="padding-top:0">
+      <div class="quote"><div class="kicker">REGIMENT MOTTO</div><blockquote>“Exemplo Ducemus”</blockquote><p>A motto reflecting leadership by example, discipline, and commitment to service.</p></div>
+    </section>
+    <section class="cta wrap"><div><div class="kicker">EXPLORE THE COMMUNITY</div><h2>Discover the Other Regiments.</h2><p>Return to the main hub to explore the other available regiments in the British Armed Forces Roblox community.</p></div><a class="button primary" href="index.html#regiments">VIEW ALL REGIMENTS <span aria-hidden="true">→</span></a></section>
+  </main>
+  <footer class="footer"><div class="footer-inner"><a class="footer-brand" href="index.html"><img src="logo.png" alt=""><span>BRITISH ARMED FORCES</span></a><p class="footer-copy">Community website for the British Armed Forces Roblox experience.<br>This is a community project and is not an official UK Ministry of Defence website.</p></div></footer>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', function () {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen);
+      menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+      menuToggle.textContent = isOpen ? '✕' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        navLinks.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Open navigation menu');
+        menuToggle.textContent = '☰';
+      });
+    });
+  </script>
+</body>
+</html>

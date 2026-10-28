@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111713">
+  <title>ETS | Education & Training Services</title>
+  <style>
+    :root {
+      --bg: #101512;
+      --panel: rgba(20, 29, 23, .88);
+      --panel-light: rgba(32, 44, 35, .88);
+      --accent: #91b68b;
+      --accent-strong: #bfd6a8;
+      --text: #f1f2e9;
+      --muted: #b8c2b5;
+      --line: rgba(177, 207, 164, .24);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--text); font-family: Inter, "Segoe UI", Arial, sans-serif;
+      background: var(--bg) url("baf.png") center/cover fixed no-repeat;
+      line-height: 1.65;
+    }
+    body::before { content: ""; position: fixed; inset: 0; z-index: -1; background: linear-gradient(135deg, rgba(8,13,10,.94), rgba(12,20,14,.88)); }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: auto; }
+    header { position: sticky; top: 0; z-index: 10; background: rgba(10,15,12,.92); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+    .nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 900; letter-spacing: .13em; }
+    .brand img { width: 45px; height: 45px; object-fit: contain; }
+    .brand span { color: var(--accent-strong); }
+    nav { display: flex; align-items: center; gap: 24px; color: var(--muted); font-size: .9rem; }
+    nav a:hover { color: var(--accent-strong); }
+    .menu { display: none; background: transparent; color: white; border: 1px solid var(--line); border-radius: 9px; padding: 8px 12px; font-size: 1.1rem; }
+    .hero { min-height: 560px; display: grid; grid-template-columns: 1.2fr .8fr; gap: 48px; align-items: center; padding-top: 72px; padding-bottom: 72px; }
+    .eyebrow { color: var(--accent-strong); text-transform: uppercase; letter-spacing: .22em; font-size: .76rem; font-weight: 800; }
+    h1 { font-size: clamp(2.8rem, 6.4vw, 5.4rem); line-height: .99; letter-spacing: -.055em; margin: 20px 0; }
+    h1 em { color: var(--accent-strong); font-style: normal; }
+    .lead { max-width: 650px; color: #d0d8cd; font-size: 1.08rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .btn { display: inline-flex; justify-content: center; align-items: center; border-radius: 7px; padding: 12px 19px; font-weight: 800; border: 1px solid var(--line); transition: .2s; }
+    .btn.primary { background: var(--accent-strong); color: #172017; border-color: var(--accent-strong); }
+    .btn:hover { transform: translateY(-2px); filter: brightness(1.08); }
+    .crest { border: 1px solid var(--line); background: linear-gradient(150deg, rgba(40,57,43,.86), rgba(13,20,15,.91)); border-radius: 18px; min-height: 330px; display: grid; place-items: center; padding: 30px; position: relative; overflow: hidden; }
+    .crest::before { content: ""; position: absolute; width: 270px; height: 270px; border-radius: 50%; border: 1px solid rgba(191,214,168,.14); }
+    .crest img { width: min(220px, 75%); max-height: 220px; object-fit: contain; position: relative; filter: drop-shadow(0 12px 24px rgba(0,0,0,.4)); }
+    .crest p { position: relative; margin: 18px 0 0; color: var(--accent-strong); text-transform: uppercase; letter-spacing: .2em; font-size: .78rem; font-weight: 800; text-align: center; }
+    section { padding: 76px 0; }
+    .section-head { max-width: 700px; margin-bottom: 30px; }
+    .section-head h2 { font-size: clamp(2rem, 4vw, 3.1rem); line-height: 1.08; margin: 10px 0 14px; letter-spacing: -.035em; }
+    .section-head p { color: var(--muted); margin: 0; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { border: 1px solid var(--line); background: var(--panel); padding: 26px; border-radius: 13px; }
+    .number { display: inline-grid; place-items: center; width: 42px; height: 42px; border-radius: 10px; color: #182018; background: var(--accent-strong); font-weight: 900; margin-bottom: 15px; }
+    .card h3 { margin: 0 0 8px; font-size: 1.16rem; }
+    .card p { margin: 0; color: var(--muted); }
+    .quote { border: 1px solid var(--line); background: linear-gradient(110deg, rgba(39,56,41,.9), rgba(16,23,18,.94)); padding: clamp(28px, 5vw, 56px); border-radius: 16px; }
+    .quote blockquote { margin: 12px 0; font-size: clamp(1.5rem, 3.6vw, 2.6rem); line-height: 1.2; font-weight: 800; letter-spacing: -.03em; }
+    .quote p { color: var(--muted); max-width: 750px; margin-bottom: 0; }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .pill { border: 1px solid var(--line); border-radius: 100px; padding: 8px 13px; color: var(--accent-strong); background: rgba(12,19,14,.6); font-size: .88rem; }
+    footer { border-top: 1px solid var(--line); padding: 30px 0; color: var(--muted); font-size: .88rem; }
+    .foot { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+    .back { color: var(--accent-strong); font-weight: 800; }
+    @media (max-width: 800px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 58px; }
+      .crest { min-height: 260px; }
+      .grid { grid-template-columns: 1fr 1fr; }
+      .menu { display: block; }
+      nav { display: none; position: absolute; top: 78px; left: 0; right: 0; padding: 18px 22px 22px; background: rgba(10,15,12,.98); border-bottom: 1px solid var(--line); flex-direction: column; align-items: flex-start; }
+      nav.open { display: flex; }
+    }
+    @media (max-width: 540px) {
+      .wrap { width: min(100% - 28px, 1120px); }
+      .grid { grid-template-columns: 1fr; }
+      section { padding: 55px 0; }
+      .brand { letter-spacing: .07em; font-size: .88rem; }
+      .brand img { width: 38px; height: 38px; }
+      .hero { gap: 30px; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><img src="logo.png" alt="BAF logo"><div>BRITISH <span>ARMED FORCES</span></div></a>
+    <button class="menu" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="#about">About ETS</a>
+      <a href="#responsibilities">Responsibilities</a>
+      <a href="#values">Our Values</a>
+      <a href="index.html#regiments">Regiments</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="wrap hero" id="top">
+    <div>
+      <div class="eyebrow">Education & Training Services · ETS</div>
+      <h1>BUILD SKILL.<br><em>BUILD CONFIDENCE.</em></h1>
+      <p class="lead">Education & Training Services supports the development of personnel through structured learning, clear standards, and consistent training across the British Armed Forces Roblox community.</p>
+      <div class="actions">
+        <a class="btn primary" href="#about">Discover ETS</a>
+        <a class="btn" href="index.html#regiments">Explore Regiments</a>
+      </div>
+    </div>
+    <div class="crest">
+      <img src="ETS.PNG" alt="ETS unit logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <div style="display:none;text-align:center;color:#bfd6a8;font-weight:900;font-size:2.4rem;letter-spacing:.12em">ETS</div>
+      <p>Animo et Fide</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Who We Are</div>
+        <h2>Training that builds a stronger team.</h2>
+        <p>ETS is focused on helping members learn their roles, understand community standards, and grow through fair and consistent instruction.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><div class="number">01</div><h3>Structured Learning</h3><p>Organised sessions help personnel understand procedures, expectations, and the responsibilities of their roles.</p></article>
+        <article class="card"><div class="number">02</div><h3>Consistent Standards</h3><p>Clear guidance helps create a shared standard of professionalism, discipline, and respectful conduct.</p></article>
+        <article class="card"><div class="number">03</div><h3>Continued Development</h3><p>Feedback and practice give members opportunities to improve confidence and teamwork over time.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="responsibilities">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Our Responsibilities</div>
+        <h2>Learn together. Improve together.</h2>
+        <p>Within the BAF community, ETS helps make learning accessible and supports a positive training environment.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><div class="number">A</div><h3>Training Sessions</h3><p>Support planned lessons and activities that help members practise skills relevant to their in-game roles.</p></article>
+        <article class="card"><div class="number">B</div><h3>Mentoring & Feedback</h3><p>Encourage constructive feedback, patience, and clear communication between instructors and trainees.</p></article>
+        <article class="card"><div class="number">C</div><h3>Community Standards</h3><p>Promote respectful behaviour, reliability, and fair treatment throughout training and everyday activities.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="values">
+    <div class="wrap quote">
+      <div class="eyebrow">Our Motto</div>
+      <blockquote>“Animo et Fide”</blockquote>
+      <p>“With courage and faith.” ETS values commitment, patience, integrity, and the willingness to keep learning. Strong teams are built when every member has the opportunity to improve.</p>
+      <div class="pill-row">
+        <span class="pill">Discipline</span><span class="pill">Knowledge</span><span class="pill">Teamwork</span><span class="pill">Integrity</span><span class="pill">Development</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Be Part of the Standard</div>
+        <h2>Every member can keep improving.</h2>
+        <p>Whether you are learning the basics or helping others develop, a strong training culture starts with respect, effort, and a willingness to listen.</p>
+      </div>
+      <a class="btn primary" href="index.html">Return to BAF Homepage</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© British Armed Forces Roblox Community · ETS</span>
+    <a class="back" href="#top">Back to top ↑</a>
+    <span>This is a community project and is not an official UK Ministry of Defence website.</span>
+  </div>
+</footer>
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', () => {
+    const opened = navLinks.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(opened));
+  });
+  navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  }));
+</script>
+</body>
+</html>

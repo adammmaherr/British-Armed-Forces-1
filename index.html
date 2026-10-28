@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#171714">
+  <meta name="description" content="Explore the British Armed Forces Roblox community, its regiments, identities, and mottos.">
+  <title>British Armed Forces | Community Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#171714;--panel:#22221e;--panel2:#2b2a24;--beige:#d6c5a3;--cream:#eee4d1;--muted:#aaa596;--border:rgba(214,197,163,.2);--heading:'Cinzel',Georgia,serif;--body:'Inter',Arial,sans-serif}
+    *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:100px}body{min-height:100vh;background:var(--bg);color:var(--cream);font-family:var(--body);overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit}
+    .background{position:fixed;inset:0;z-index:-2;background:linear-gradient(180deg,rgba(16,16,14,.76),rgba(16,16,14,.87) 45%,#171714 100%),url('baf.png') center/cover no-repeat;transform:scale(1.02)}.background:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,9,.3),transparent 50%,rgba(10,10,9,.3))}
+    .header{position:sticky;top:0;z-index:100;background:rgba(23,23,20,.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}.nav{width:min(1200px,92%);min-height:82px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:25px}.brand{display:flex;align-items:center;gap:13px;min-width:0}.brand img{width:49px;height:49px;object-fit:contain;flex-shrink:0}.brand-text{display:flex;flex-direction:column;gap:4px}.brand-title{font:800 17px var(--heading);letter-spacing:1.2px;white-space:nowrap}.brand-subtitle{color:var(--muted);font-size:9px;letter-spacing:2.2px;text-transform:uppercase}.nav-links{display:flex;align-items:center;gap:28px}.nav-links a{position:relative;padding:10px 0;color:#c7c2b5;font-size:12px;font-weight:600;transition:color .25s}.nav-links a:after{content:'';position:absolute;left:0;bottom:3px;width:0;height:2px;background:var(--beige);transition:width .25s}.nav-links a:hover{color:var(--cream)}.nav-links a:hover:after{width:100%}.menu-toggle{display:none;width:43px;height:43px;color:var(--cream);background:var(--panel);border:1px solid var(--border);border-radius:8px;cursor:pointer}
+    .wrap{width:min(1200px,92%);margin:auto}.hero{min-height:620px;display:flex;align-items:center;padding:90px 0 100px}.hero-content{max-width:790px;animation:reveal .9s ease both}.eyebrow,.kicker{display:inline-flex;align-items:center;gap:11px;margin-bottom:24px;color:var(--beige);font-size:10px;font-weight:800;letter-spacing:3px;text-transform:uppercase}.eyebrow:before{content:'';width:34px;height:1px;background:var(--beige)}h1,h2,h3{font-family:var(--heading)}.hero h1{max-width:850px;margin-bottom:25px;font-size:clamp(40px,7vw,78px);line-height:1.12;letter-spacing:-1.5px;text-wrap:balance}.hero h1 span{display:block;color:var(--beige)}.hero-description{max-width:590px;color:#c1bdaf;font-size:14px;line-height:2}.hero-actions{display:flex;flex-wrap:wrap;gap:15px;margin-top:35px}.button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:50px;padding:0 23px;border:1px solid transparent;border-radius:4px;font-size:11px;font-weight:800;letter-spacing:1px;transition:all .25s}.button:hover{transform:translateY(-3px)}.primary{background:var(--beige);color:#191916}.primary:hover{background:var(--cream)}.secondary{background:rgba(23,23,20,.45);color:var(--cream);border-color:var(--border)}.secondary:hover{border-color:var(--beige);background:rgba(214,197,163,.08)}.hero-note{display:flex;align-items:center;gap:10px;margin-top:43px;color:#a9a597;font-size:10px;letter-spacing:1px}.dot{width:7px;height:7px;background:#a5b38a;border-radius:50%;box-shadow:0 0 12px rgba(165,179,138,.45)}
+    .divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent)}.section{padding:92px 0}.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;margin-bottom:38px}.kicker{display:block;margin-bottom:13px}.section-head h2,.intro-copy h2,.quote h2,.cta h2{font-size:clamp(27px,4vw,42px);line-height:1.25}.section-description{max-width:400px;color:var(--muted);font-size:12px;line-height:1.9}.count{color:var(--beige);font:12px var(--heading);letter-spacing:1px}
+    .regiment-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.regiment-card{position:relative;min-height:315px;display:flex;flex-direction:column;align-items:flex-start;overflow:hidden;padding:27px;background:linear-gradient(145deg,rgba(43,42,36,.96),rgba(27,27,23,.97));border:1px solid var(--border);border-radius:5px;transition:transform .3s,border-color .3s,background .3s;animation:reveal .65s ease both}.regiment-card:hover{transform:translateY(-6px);border-color:rgba(214,197,163,.65);background:linear-gradient(145deg,rgba(52,50,42,.98),rgba(31,31,26,.98))}.regiment-card:before{content:'';position:absolute;top:0;left:0;width:0;height:2px;background:var(--beige);transition:width .3s}.regiment-card:hover:before{width:100%}.regiment-number{color:#9c947f;font-size:10px;font-weight:700;letter-spacing:2px}.regiment-logo{width:86px;height:86px;margin:23px auto 20px;align-self:center;object-fit:contain;filter:drop-shadow(0 5px 14px rgba(0,0,0,.25));transition:transform .3s}.regiment-card:hover .regiment-logo{transform:scale(1.07)}.regiment-card h3{width:100%;margin-bottom:9px;color:var(--cream);font-size:19px;letter-spacing:1px;text-align:center}.motto{width:100%;min-height:20px;color:#b9b09d;font-size:11px;font-style:italic;line-height:1.7;text-align:center}.regiment-link{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:22px;color:var(--beige);font-size:10px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase}.regiment-link span:last-child{font-size:18px;transition:transform .25s}.regiment-card:hover .regiment-link span:last-child{transform:translateX(5px)}.regiment-card:nth-child(2){animation-delay:.08s}.regiment-card:nth-child(3){animation-delay:.16s}.regiment-card:nth-child(4){animation-delay:.24s}.regiment-card:nth-child(5){animation-delay:.32s}.coming-card{cursor:default;border-style:dashed}.coming-card:hover{transform:none;border-color:var(--border);background:linear-gradient(145deg,rgba(43,42,36,.96),rgba(27,27,23,.97))}.coming-card:hover:before{width:0}.coming-card .regiment-logo{opacity:.72;filter:grayscale(.35)}.coming-badge{display:inline-flex;align-self:center;margin-top:20px;padding:8px 12px;border:1px solid rgba(214,197,163,.35);border-radius:3px;color:var(--beige);font-size:9px;font-weight:800;letter-spacing:2px}.coming-card .regiment-link{color:#8d887a}
+    .intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.intro-copy h2{margin-bottom:22px}.intro-copy p{margin-bottom:15px;color:#b9b4a6;font-size:13px;line-height:2}.feature-list{display:grid;gap:14px;margin-top:28px}.feature{display:flex;gap:15px;padding:17px;background:rgba(214,197,163,.045);border:1px solid rgba(214,197,163,.12);border-radius:4px}.feature-icon{width:36px;height:36px;display:grid;place-items:center;flex-shrink:0;background:rgba(214,197,163,.1);color:var(--beige);font-size:17px}.feature h3{margin-bottom:6px;font:700 13px var(--body);color:var(--cream)}.feature p{margin:0;color:var(--muted);font-size:11px;line-height:1.8}.quote-panel{position:relative;min-height:390px;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding:40px;background:linear-gradient(145deg,rgba(214,197,163,.12),rgba(25,25,21,.72));border:1px solid var(--border)}.quote-panel:after{content:'BAF';position:absolute;right:-14px;bottom:-30px;color:rgba(214,197,163,.055);font:800 110px var(--heading);letter-spacing:4px}.quote-mark{color:var(--beige);font:70px Georgia,serif;line-height:1}.quote-panel blockquote{position:relative;z-index:1;margin:15px 0 22px;font:600 clamp(22px,3vw,31px)/1.5 var(--heading);color:var(--cream)}.quote-panel p{position:relative;z-index:1;color:var(--muted);font-size:11px;line-height:1.9}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);background:rgba(23,23,20,.65)}.stat{padding:30px 18px;text-align:center;border-right:1px solid var(--border)}.stat:last-child{border-right:0}.stat strong{display:block;margin-bottom:9px;color:var(--beige);font:700 clamp(27px,4vw,40px) var(--heading)}.stat span{color:var(--muted);font-size:10px;letter-spacing:1.5px;text-transform:uppercase}
+    .cta{margin:0 auto 100px;padding:45px;display:flex;align-items:center;justify-content:space-between;gap:30px;background:linear-gradient(110deg,rgba(214,197,163,.12),rgba(214,197,163,.035));border:1px solid var(--border);border-radius:5px}.cta h2{margin-bottom:12px}.cta p{max-width:620px;color:var(--muted);font-size:12px;line-height:1.9}.cta .button{flex-shrink:0}.footer{border-top:1px solid var(--border);background:rgba(15,15,13,.84)}.footer-inner{width:min(1200px,92%);min-height:105px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}.footer-brand{display:flex;align-items:center;gap:11px;font:800 12px var(--heading);letter-spacing:1px}.footer-brand img{width:33px;height:33px;object-fit:contain}.footer-copy{color:#8f8b7e;font-size:10px;line-height:1.8;text-align:right}
+    @keyframes reveal{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:900px){.nav-links{gap:18px}.regiment-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.section-head{align-items:flex-start;flex-direction:column}.intro-grid{grid-template-columns:1fr;gap:30px}.quote-panel{min-height:300px}}
+    @media(max-width:650px){.nav{min-height:72px}.brand img{width:42px;height:42px}.brand-title{font-size:12px;letter-spacing:.5px}.brand-subtitle{font-size:7px;letter-spacing:1.2px}.menu-toggle{display:inline-flex;align-items:center;justify-content:center;font-size:22px}.nav-links{position:absolute;top:calc(100% + 1px);left:0;right:0;display:none;flex-direction:column;align-items:stretch;gap:0;padding:10px 4%;background:rgba(23,23,20,.98);border-bottom:1px solid var(--border)}.nav-links.open{display:flex}.nav-links a{padding:15px 4px;border-bottom:1px solid rgba(214,197,163,.08)}.nav-links a:last-child{border-bottom:0}.nav-links a:after{display:none}.hero{min-height:540px;padding:80px 0}.hero h1{font-size:clamp(37px,10vw,54px);letter-spacing:-.8px}.hero-description{font-size:13px}.hero-actions{align-items:stretch;flex-direction:column;max-width:300px}.button{width:100%}.hero-note{font-size:9px;line-height:1.8}.section{padding:72px 0}.regiment-grid{grid-template-columns:1fr;gap:14px}.regiment-card{min-height:290px}.quote-panel{padding:28px;min-height:290px}.stats{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--border)}.stat:last-child{border-bottom:0}.cta{align-items:stretch;flex-direction:column;margin-bottom:70px;padding:28px}.cta .button{width:100%}.footer-inner{align-items:flex-start;flex-direction:column;justify-content:center;padding:25px 0}.footer-copy{text-align:left}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <div class="background" aria-hidden="true"></div>
+  <header class="header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="British Armed Forces home">
+        <img src="logo.png" alt="BAF logo">
+        <span class="brand-text"><span class="brand-title">BRITISH ARMED FORCES</span><span class="brand-subtitle">Discipline · Honour · Service</span></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+      <div class="nav-links" id="navLinks"><a href="#home">Home</a><a href="#regiments">Regiments</a><a href="#community">Community</a><a href="#values">Our Values</a></div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero wrap" id="home">
+      <div class="hero-content">
+        <div class="eyebrow">BRITISH ARMED FORCES COMMUNITY</div>
+        <h1>HONOUR IN <span>EVERY DUTY.</span></h1>
+        <p class="hero-description">Explore the regiments of the British Armed Forces Roblox community. Discover their identities, mottos, and dedicated pages through one central hub built for our community.</p>
+        <div class="hero-actions"><a class="button primary" href="#regiments">EXPLORE THE REGIMENTS <span aria-hidden="true">→</span></a><a class="button secondary" href="#community">ABOUT THE COMMUNITY</a></div>
+        <div class="hero-note"><span class="dot" aria-hidden="true"></span><span>ONE COMMUNITY · DISTINCT IDENTITIES</span></div>
+      </div>
+    </section>
+    <div class="divider"></div>
+    <section class="section wrap" id="regiments">
+      <div class="section-head"><div><div class="kicker">OUR ORGANISATION</div><h2>Explore Our Regiments</h2></div><p class="section-description">Every regiment has its own identity, motto, and dedicated page. Choose an available regiment to learn more about its community.</p><span class="count">05 REGIMENTS</span></div>
+      <div class="regiment-grid">
+        <a class="regiment-card" href="uksf.html"><span class="regiment-number">REGIMENT 01 / UKSF</span><img class="regiment-logo" src="UKSF.PNG" alt="UKSF regiment logo" loading="lazy"><h3>UKSF</h3><p class="motto">"Who Dares Wins"</p><div class="regiment-link"><span>Explore Regiment</span><span aria-hidden="true">→</span></div></a>
+        <a class="regiment-card" href="rmp.html"><span class="regiment-number">REGIMENT 02 / RMP</span><img class="regiment-logo" src="RMP.PNG" alt="RMP regiment logo" loading="lazy"><h3>RMP</h3><p class="motto">"Exemplo Ducemus"</p><div class="regiment-link"><span>Explore Regiment</span><span aria-hidden="true">→</span></div></a>
+        <a class="regiment-card" href="ets.html"><span class="regiment-number">REGIMENT 03 / ETS</span><img class="regiment-logo" src="ETS.PNG" alt="ETS regiment logo" loading="lazy"><h3>ETS</h3><p class="motto">"Animo et Fide"</p><div class="regiment-link"><span>Explore Regiment</span><span aria-hidden="true">→</span></div></a>
+        <a class="regiment-card" href="rgg.html"><span class="regiment-number">REGIMENT 04 / RGG</span><img class="regiment-logo" src="RGG.PNG" alt="RGG regiment logo" loading="lazy"><h3>RGG</h3><p class="motto">"Honi soit qui mal y pense"</p><div class="regiment-link"><span>Explore Regiment</span><span aria-hidden="true">→</span></div></a>
+        <div class="regiment-card coming-card" aria-label="16th AAB coming soon"><span class="regiment-number">REGIMENT 05 / AAB</span><img class="regiment-logo" src="AAB.PNG" alt="16th AAB regiment logo" loading="lazy"><h3>16th AAB</h3><p class="motto">"Pegasus"</p><span class="coming-badge">COMING SOON</span><div class="regiment-link"><span>Maybe?</span><span aria-hidden="true">⌛</span></div></div>
+      </div>
+    </section>
+    <div class="divider"></div>
+    <section class="section wrap" id="community">
+      <div class="intro-grid">
+        <div class="intro-copy"><div class="kicker">WHO WE ARE</div><h2>More Than A Name.<br>A Shared Identity.</h2><p>This website is a central hub for the British Armed Forces Roblox community, bringing the different regiments together in one place.</p><p>Each regiment has its own traditions, motto, and identity. This hub helps members and visitors find the information they need and navigate to each regiment's dedicated page.</p><div class="feature-list">
+          <div class="feature"><span class="feature-icon" aria-hidden="true">✦</span><div><h3>Distinct Regiment Pages</h3><p>Dedicated pages for available regiments, with their own identity and information.</p></div></div>
+          <div class="feature"><span class="feature-icon" aria-hidden="true">⚑</span><div><h3>Identity & Tradition</h3><p>Regiment logos and mottos help give every page its own character.</p></div></div>
+          <div class="feature"><span class="feature-icon" aria-hidden="true">⌖</span><div><h3>One Central Hub</h3><p>A simple place to explore the community and find each regiment.</p></div></div>
+        </div></div>
+        <div class="quote-panel" id="values"><div class="kicker">OUR VALUES</div><span class="quote-mark" aria-hidden="true">“</span><blockquote>Discipline.<br>Honour.<br>Commitment.</blockquote><p>A community united by teamwork, dedication, and respect for every member.</p></div>
+      </div>
+    </section>
+    <section class="section wrap" aria-label="Community overview" style="padding-top:0">
+      <div class="stats"><div class="stat"><strong>5</strong><span>Listed Regiments</span></div><div class="stat"><strong>117</strong><span>Current Members</span></div><div class="stat"><strong>Hallowen</strong><span>Current Season</span></div></div>
+    </section>
+    <section class="cta wrap"><div><div class="kicker">FIND YOUR REGIMENT</div><h2>Explore. Discover. Connect.</h2><p>Start with the available regiment pages and discover the identities that make up the British Armed Forces community.</p></div><a class="button primary" href="#regiments">VIEW REGIMENTS <span aria-hidden="true">→</span></a></section>
+  </main>
+  <footer class="footer"><div class="footer-inner"><a class="footer-brand" href="index.html"><img src="logo.png" alt=""><span>BRITISH ARMED FORCES</span></a><p class="footer-copy">Community website for the British Armed Forces Roblox experience.<br>This is a community project and is not an official UK Ministry of Defence website.</p></div></footer>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', function () {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen);
+      menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+      menuToggle.textContent = isOpen ? '✕' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        navLinks.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Open navigation menu');
+        menuToggle.textContent = '☰';
+      });
+    });
+  </script>
+</body>
+</html>
